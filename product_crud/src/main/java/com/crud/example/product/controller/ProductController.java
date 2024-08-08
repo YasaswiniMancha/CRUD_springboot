@@ -1,7 +1,8 @@
-package com.javatechie.crud.example.controller;
+package com.crud.example.product.controller;
 
-import com.javatechie.crud.example.entity.Product;
-import com.javatechie.crud.example.service.ProductService;
+import com.crud.example.product.entity.Product;
+import com.crud.example.product.service.ProductService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
