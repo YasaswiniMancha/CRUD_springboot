@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 import jakarta.persistence.*;
 
 @Data
@@ -14,11 +17,23 @@ import jakarta.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private int quantity;
     private double price;
+    
+    
+	public Product() {
+	}
+
+	public Product(int id, String name, int quantity, double price) {
+		this.id = id;
+		this.name = name;
+		this.quantity = quantity;
+		this.price = price;
+	}
+	
 	public int getId() {
 		return id;
 	}
